@@ -1,0 +1,31 @@
+.cart-sidebar{
+  height: 100%;
+  background: white;
+  width: 25%;
+  right:0;
+  position: absolute;
+  transition: 1s;
+  display: flex;
+  z-index: 1;
+
+  .close-cart{
+    right: 0;
+    position: absolute;
+    font-size: large;
+     &:hover{
+       cursor: pointer;
+       text-shadow: -1px 0px 2px black;
+     }
+  }
+
+  .cart-items {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  button {
+    margin: auto;
+  }
+}
