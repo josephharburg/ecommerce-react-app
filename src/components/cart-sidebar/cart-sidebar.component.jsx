@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
+import { selectCartItems } from '../../redux/cart/cart.selectors';
+
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
 
@@ -21,7 +23,7 @@ const CartSidebar = ({toggleCartHidden, cartItems}) => (
   </div>
 )
 
-const mapStateToProps = ({cart: {cartItems}}) => ({cartItems});
+const mapStateToProps = state => ({cartItems}: selectCartItems(state));
 const mapDispatchToProps = dispatch => ({
   toggleCartHidden: () => dispatch(toggleCartHidden())
 });
