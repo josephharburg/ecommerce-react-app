@@ -5,8 +5,9 @@
   right:0;
   position: absolute;
   transition: 1s;
-  display: flex;
   z-index: 1;
+  overflow: scroll;
+
 
   .close-cart{
     right: 0;
@@ -16,13 +17,13 @@
        cursor: pointer;
        text-shadow: -1px 0px 2px black;
      }
+     display: flex;
   }
 
   .cart-items {
-    height: 240px;
     display: flex;
+    width: 100%;
     flex-direction: column;
-    overflow: scroll;
   }
 
   button {
