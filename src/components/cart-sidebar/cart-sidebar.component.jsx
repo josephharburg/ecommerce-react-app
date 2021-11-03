@@ -13,7 +13,7 @@ import './cart-items.styles.scss';
 
 const CartSidebar = ({cartItems, history, dispatch}) => (
   <div className='cart-sidebar'>
-    <span className='close-cart' title='Close' onClick={toggleCartHidden}>X</span>
+    <span className='close-cart' title='Close' onClick={()=> dispatch(toggleCartHidden())}>X</span>
     <div className='cart-items'>
       {cartItems.length ? cartItems.map(cartItem => (
         <CartItem key={cartItem.id} item={cartItem} />
